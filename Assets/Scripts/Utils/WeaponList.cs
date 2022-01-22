@@ -15,5 +15,13 @@ public class WeaponList
             weapon.Fire();
         }
     }
+
+    public void Fire(int selectedWeapon)
+    {
+        Weapon weapon = m_Weapons[selectedWeapon];
+
+        weapon.Fire();
+
+    }
 }
 

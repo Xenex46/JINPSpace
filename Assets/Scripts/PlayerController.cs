@@ -23,6 +23,18 @@ public class PlayerController : MonoBehaviour
 
     private bool m_Shoot = false;
 
+    private bool m_Weapon1 = false;
+
+    private bool m_Weapon2 = false;
+
+    private bool m_Weapon3 = false;
+
+    private bool m_Weapon4 = false;
+
+    private bool m_Weapon5 = false;
+
+    private int selectedWeapon = 1;
+
     private readonly int m_HorizontalAnimatorHash = Animator.StringToHash("Horizontal");
 
     private readonly int m_VerticalAnimatorHash = Animator.StringToHash("Vertical");
@@ -33,6 +45,12 @@ public class PlayerController : MonoBehaviour
         m_Vertical = Input.GetAxis("Vertical");
 
         m_Shoot = Input.GetButton("Shoot");
+
+        m_Weapon1 = Input.GetButton("Weapon1");
+        m_Weapon2 = Input.GetButton("Weapon2");
+        m_Weapon3 = Input.GetButton("Weapon3");
+        m_Weapon4 = Input.GetButton("Weapon4");
+        m_Weapon5 = Input.GetButton("Weapon5");
     }
 
     private void UpdateAnimator()
@@ -56,9 +74,30 @@ public class PlayerController : MonoBehaviour
         GetInput();
         UpdateAnimator();
 
+        if (m_Weapon1)
+        {
+            selectedWeapon = 0;
+        }
+        else if (m_Weapon2)
+        {
+            selectedWeapon = 1;
+        }
+        else if (m_Weapon3)
+        {
+            selectedWeapon = 2;
+        }
+        else if (m_Weapon4)
+        {
+            selectedWeapon = 3;
+        }
+        else if (m_Weapon5)
+        {
+            selectedWeapon = 4;
+        }
+
         if (m_Shoot)
         {
-            m_Weapons.FireAll();
+            m_Weapons.Fire(selectedWeapon);
         }
     }
 

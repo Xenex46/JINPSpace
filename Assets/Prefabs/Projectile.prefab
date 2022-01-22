@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1498458144819777340}
   - component: {fileID: 1498458144819777280}
   - component: {fileID: 4735236123148229844}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf41a047ae72f4047ad162bd3e65626e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DamageMin: 10
-  m_DamageMax: 20
+  m_DamageMin: 25
+  m_DamageMax: 30
   OnObjectHit:
     m_PersistentCalls:
       m_Calls:
