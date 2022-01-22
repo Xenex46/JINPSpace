@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Weapon : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class Weapon : MonoBehaviour
     private ProjectileMovement m_ProjectilePrefab = null;
 
     [SerializeField]
-    private Transform m_Emitter = null;
+    private List<Transform> m_Emitters = null;
 
     [SerializeField]
     private float m_RateOfFire = 10f;
@@ -34,8 +35,11 @@ public class Weapon : MonoBehaviour
 
     private IEnumerator RateOfFireLimiterCoroutine()
     {
-        ProjectileMovement projectileInstance = m_Pool.Get();
-        projectileInstance.Restart(m_Emitter.position, m_Emitter.rotation);
+        foreach (Transform emitter in m_Emitters)
+        {
+            ProjectileMovement projectileInstance = m_Pool.Get();
+            projectileInstance.Restart(emitter.position, emitter.rotation);
+        }
 
         yield return new WaitForSeconds(1f / m_RateOfFire);
 
