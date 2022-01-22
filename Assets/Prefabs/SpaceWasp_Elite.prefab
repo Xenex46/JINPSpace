@@ -107,6 +107,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1498458144819777280, guid: ecce22eb7aaab7247a724ddaa131b64f,
         type: 3}
+    - target: {fileID: 2266971069179148153, guid: e066e6748963d3e4999d03759e9d99dd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3530344881543572941, guid: e066e6748963d3e4999d03759e9d99dd,
         type: 3}
       propertyPath: m_ProjectilePrefab
@@ -178,6 +183,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceWasp_Elite
       objectReference: {fileID: 0}
+    - target: {fileID: 6040415532934211481, guid: e066e6748963d3e4999d03759e9d99dd,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6040415532934211483, guid: e066e6748963d3e4999d03759e9d99dd,
         type: 3}
       propertyPath: m_AttackTimeSeconds
@@ -186,13 +196,28 @@ PrefabInstance:
     - target: {fileID: 6040415532934211483, guid: e066e6748963d3e4999d03759e9d99dd,
         type: 3}
       propertyPath: m_Weapons.m_Weapons.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6040415532934211483, guid: e066e6748963d3e4999d03759e9d99dd,
+        type: 3}
+      propertyPath: m_Weapons.m_Weapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 2409771314551981702}
+    - target: {fileID: 6040415532934211483, guid: e066e6748963d3e4999d03759e9d99dd,
+        type: 3}
+      propertyPath: m_Weapons.m_Weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 8360511984141423615}
+    - target: {fileID: 6040415532934211483, guid: e066e6748963d3e4999d03759e9d99dd,
+        type: 3}
+      propertyPath: m_Weapons.m_Weapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 8315653193909035976}
     - target: {fileID: 6040415532934211483, guid: e066e6748963d3e4999d03759e9d99dd,
         type: 3}
       propertyPath: m_Weapons.m_Weapons.Array.data[3]
       value: 
-      objectReference: {fileID: 8315653193909035976}
+      objectReference: {fileID: 5303038881342933976}
     - target: {fileID: 6040415532934211483, guid: e066e6748963d3e4999d03759e9d99dd,
         type: 3}
       propertyPath: m_Weapons.m_Weapons.Array.data[4]
@@ -212,3 +237,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4969947234824142386}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2409771314551981702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7316650183644461236, guid: e066e6748963d3e4999d03759e9d99dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 4969947234824142386}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7830c1675bd32e041b985f71a2d09eca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8360511984141423615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3530344881543572941, guid: e066e6748963d3e4999d03759e9d99dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 4969947234824142386}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7830c1675bd32e041b985f71a2d09eca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

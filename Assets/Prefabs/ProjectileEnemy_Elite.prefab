@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36cef6c4dfd04d4caecb216388279ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovementSpeed: 35
+  m_MovementSpeed: 40
   m_Rigidbody: {fileID: 1498458144819777341}
   m_TrailRenderer: {fileID: 1498458144819777282}
 --- !u!114 &4735236123148229844

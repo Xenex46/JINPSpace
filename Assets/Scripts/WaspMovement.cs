@@ -12,6 +12,9 @@ public class WaspMovement : APooledObject
     private DestructibleObject m_DestructibleObject = null;
 
     [SerializeField]
+    private int m_ScoreValue = 999;
+
+    [SerializeField]
     private Animator m_Animator = null;
 
     [Header("Movement")]
@@ -65,7 +68,7 @@ public class WaspMovement : APooledObject
 
     private void HandleDeathAnimationEvent()
     {
-        GameplayManager.Instance.HandlePointsAdded(999);
+        GameplayManager.Instance.HandlePointsAdded(m_ScoreValue);
 
         if (m_AttackCoroutine != null)
         {

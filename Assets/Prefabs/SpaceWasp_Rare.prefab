@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 6040415532934211462}
   - component: {fileID: 6040415532934211463}
   m_Layer: 10
-  m_Name: SpaceWasp
+  m_Name: SpaceWasp_Rare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DestructibleObject: {fileID: 6040415532934211463}
+  m_ScoreValue: 999
   m_Animator: {fileID: 6040415531176964179}
   m_MovementSpeed: {x: 5, y: 5}
   m_SideMovementAmplitude: 10
@@ -623,6 +624,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4537d4afdf07c444cbb0a2f12f06a518, type: 2}
+    - target: {fileID: 13700000, guid: 083b35cf5b10a9e40b15924dd567bd8f, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a1cd26cc91479c43a14343c3d5dc502, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 083b35cf5b10a9e40b15924dd567bd8f, type: 3}
 --- !u!4 &6040415531169275897 stripped
