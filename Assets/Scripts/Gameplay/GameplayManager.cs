@@ -39,7 +39,16 @@ public class GameplayManager : ASingleton<GameplayManager>
 
     public void RestartLevel()
     {
+        Debug.Log($"Restarting level");
         SceneLoader.LoadScene(SceneNamesConsts.SPACE_SCENE_NAME, null);
+       
+    }
+
+    public void EndLevel()
+    {
+        PlayerPrefs.SetInt("score", m_Points);
+        Debug.Log($"Ending level");
+        SceneLoader.LoadScene(SceneNamesConsts.VICTORY_SCENE_NAME, null);
     }
 
     public void GoToMainMenu()
@@ -60,7 +69,7 @@ public class GameplayManager : ASingleton<GameplayManager>
     private IEnumerator AttackCoroutine()
     {
         yield return new WaitForSeconds(2f);
-        RestartLevel();
+        EndLevel();
     }
 
 #if UNITY_EDITOR
