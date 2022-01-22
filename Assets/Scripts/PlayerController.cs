@@ -44,6 +44,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 newPosition = m_Rigidbody.position +  new Vector3(m_Horizontal, 0f, m_Vertical) * Time.deltaTime * m_Speed;
+        if (newPosition[0] > 35) newPosition[0] = 35;
+        if (newPosition[0] < -35) newPosition[0] = -35;
+        if (newPosition[2] > 25) newPosition[2] = 25;
+        if (newPosition[2] < -30) newPosition[2] = -30;
         m_Rigidbody.MovePosition(newPosition);
     }
 
