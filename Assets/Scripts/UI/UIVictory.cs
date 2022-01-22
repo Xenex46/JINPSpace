@@ -6,11 +6,24 @@ using UnityEngine.SceneManagement;
 public class UIVictory : MonoBehaviour
 {
     [SerializeField]
-    private Text m_PointsText = null; 
-
+    private Text m_PointsText = null;
+    [SerializeField]
+    private Text m_HighScoreText = null;
+    [SerializeField]
+    private Text m_NewHighScoreText = null;
     public void Start()
     {
         m_PointsText.text = PlayerPrefs.GetInt("score").ToString();
+        if(PlayerPrefs.GetInt("score") > PlayerPrefs.GetInt("highScore"))
+        {
+            m_NewHighScoreText.text = "New High Score!";
+            PlayerPrefs.SetInt("highScore", PlayerPrefs.GetInt("score"));
+        }
+        else
+        {
+            m_NewHighScoreText.text = "";
+        }
+        m_HighScoreText.text = "High Score: "  + PlayerPrefs.GetInt("highScore").ToString();
     }
 
     public void Quit()

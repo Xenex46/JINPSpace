@@ -15,6 +15,8 @@ public class UIMainMenuController : MonoBehaviour
 
     public void StartGame()
     {
+        if (!PlayerPrefs.HasKey("highScore"))
+            PlayerPrefs.SetInt("highScore", 0);
         SceneLoader.LoadScene(SceneNamesConsts.SPACE_SCENE_NAME, HandleSceneLaoded);
     }
 
