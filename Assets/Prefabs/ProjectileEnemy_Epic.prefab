@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1498458144819777280}
   - component: {fileID: 4735236123148229844}
   m_Layer: 10
-  m_Name: ProjectileEnemy
+  m_Name: ProjectileEnemy_Epic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38a7257bdfc33454398f9c6a46618138, type: 2}
+  - {fileID: 2100000, guid: fc1a65f2fa19dd24d806ada1717373f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
