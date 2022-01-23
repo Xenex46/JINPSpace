@@ -68,6 +68,11 @@ public class ProjectileMovement : APooledObject
 
     public void HandleObjectHit(bool applyDamage, DamageInfo damgeInfo)
     {
+        if (m_IsPickup && damgeInfo.Dealer != null)
+        {
+            Debug.Log("Pickup hit projectile");
+            return;
+        }
         if (m_Explosion != null)
         {
             Explosion explosion = m_Pool.Get();
