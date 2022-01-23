@@ -6,7 +6,7 @@ using UnityEngine;
 public class WeaponList
 {
     [SerializeField]
-    private List<Weapon> m_Weapons = null;
+    public List<Weapon> m_Weapons = null;
 
     public void FireAll()
     {

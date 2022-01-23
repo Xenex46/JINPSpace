@@ -6,6 +6,9 @@ public class DestructibleObject : MonoBehaviour
     public UnityEvent OnDestroyed = new UnityEvent();
 
     [SerializeField]
+    private PlayerController m_PlayerController = null;
+
+    [SerializeField]
     private int m_TotalHealthpoints = 100;
 
     private int m_CurrentHealthpoints = 0;
@@ -40,14 +43,17 @@ public class DestructibleObject : MonoBehaviour
             return;
         }
 
+        
+        if(damageInfo.DamageAmount < 0)
+        {
+            m_PlayerController.m_Weapons.m_Weapons[-damageInfo.DamageAmount].m_Ammo += damageInfo.AmmoAmount;
+            return;
+        }
+
         InstantiateFloatingText(
             damageInfo.DamageAmount.ToString(),
             damageInfo.Dealer.transform.position);
-        if(damageInfo.DamageAmount < 0)
-        {
 
-            return;
-        }
         m_CurrentHealthpoints -= damageInfo.DamageAmount;
 
         if (m_Healthbar == null)

@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private float m_Speed = 100f;
 
     [SerializeField]
-    private WeaponList m_Weapons = null;
+    public WeaponList m_Weapons = null;
 
     [SerializeField]
     private Rigidbody m_Rigidbody = null;

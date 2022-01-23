@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Emitters:
   - {fileID: 8697427698003138579}
   m_RateOfFire: 10
+  m_InfiniteAmmo: 1
+  m_Ammo: 0
 --- !u!1 &4540170619083102048
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +229,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_PlayerController: {fileID: 0}
   m_TotalHealthpoints: 100
   m_FloatingTextPrefab: {fileID: 6849007179813323748, guid: ae34a7d6a8af7c044a8e32075d64cc14,
     type: 3}
