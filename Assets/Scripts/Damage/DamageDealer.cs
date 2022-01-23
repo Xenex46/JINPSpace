@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public struct DamageInfo
 {
     public int DamageAmount;
-
+    public int AmmoAmount;
     public DamageDealer Dealer;
 }
 
@@ -26,6 +26,7 @@ public class DamageDealer : MonoBehaviour
         DamageInfo damageInfo = new DamageInfo()
         {
             DamageAmount = GetDamage(),
+            AmmoAmount = Random.Range(1, 5),
             Dealer = this
         };
 

@@ -3,6 +3,9 @@ using UnityEngine;
 public class ProjectileMovement : APooledObject
 {
     [SerializeField]
+    public bool m_IsPickup = false;
+
+    [SerializeField]
     private float m_MovementSpeed = 10f;
 
     [SerializeField]
