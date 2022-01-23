@@ -81,4 +81,19 @@ public class DestructibleObject : MonoBehaviour
         m_CurrentHealthpoints = m_TotalHealthpoints;
         m_IsDestroyed = false;
     }
+
+    public void Destroy()
+    {
+        if (m_IsDestroyed)
+        {
+            return;
+        }
+
+        m_IsDestroyed = true;
+
+        m_Healthbar.ReturnToPool();
+        m_Healthbar = null;
+
+        OnDestroyed.Invoke();
+    }
 }

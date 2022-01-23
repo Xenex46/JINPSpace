@@ -62,11 +62,13 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 newPosition = m_Rigidbody.position +  new Vector3(m_Horizontal, 0f, m_Vertical) * Time.deltaTime * m_Speed;
-        if (newPosition[0] > 35) newPosition[0] = 35;
-        if (newPosition[0] < -35) newPosition[0] = -35;
-        if (newPosition[2] > 25) newPosition[2] = 25;
-        if (newPosition[2] < -30) newPosition[2] = -30;
-        m_Rigidbody.MovePosition(newPosition);
+        //if (newPosition[0] > 35) newPosition[0] = 35;
+        //if (newPosition[0] < -35) newPosition[0] = -35;
+        if (newPosition[2] > 30) newPosition[2] = 30;
+        if (newPosition[2] < -32) newPosition[2] = -32;
+        //-58 30 : -35 -32
+        if(62 * newPosition[0] + 23 * newPosition[2] > -2906 && -62 * newPosition[0] + 23 * newPosition[2] > -2906 && newPosition[2] >= -32 && newPosition[2] <= 30)
+            m_Rigidbody.MovePosition(newPosition);
     }
 
     private void Update()
