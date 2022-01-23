@@ -43,7 +43,11 @@ public class DestructibleObject : MonoBehaviour
         InstantiateFloatingText(
             damageInfo.DamageAmount.ToString(),
             damageInfo.Dealer.transform.position);
+        if(damageInfo.DamageAmount < 0)
+        {
 
+            return;
+        }
         m_CurrentHealthpoints -= damageInfo.DamageAmount;
 
         if (m_Healthbar == null)
@@ -80,20 +84,5 @@ public class DestructibleObject : MonoBehaviour
     {
         m_CurrentHealthpoints = m_TotalHealthpoints;
         m_IsDestroyed = false;
-    }
-
-    public void Destroy()
-    {
-        if (m_IsDestroyed)
-        {
-            return;
-        }
-
-        m_IsDestroyed = true;
-
-        m_Healthbar.ReturnToPool();
-        m_Healthbar = null;
-
-        OnDestroyed.Invoke();
     }
 }
