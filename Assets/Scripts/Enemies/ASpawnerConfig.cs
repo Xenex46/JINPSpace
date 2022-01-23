@@ -5,7 +5,17 @@ public abstract class ASpawnerConfig<T> : ScriptableObject where T : APooledObje
 {
     public List<T> Enemies = new List<T>();
 
-    public float SpawnIntervalSeconds = 1f;
+    public float SpawnIntervalMultiplier = 41.17f;
+
+    public float Flatness = 4f;
+
+    public bool IsEndgame = false;
+
+    public float EndgameHardness = 1f;
+
+    public float SpawnBeginOffsetSeconds = 0;
+
+    public int SecondsActive = 60;
 
     public T GetRandomEnemy()
     {

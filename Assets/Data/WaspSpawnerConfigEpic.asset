@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d167d444fef5244c98cb1677c422d0a, type: 3}
-  m_Name: WaspSpawnerConfig_Elite
+  m_Name: WaspSpawnerConfigEpic
   m_EditorClassIdentifier: 
   Enemies:
-  - {fileID: 1669447061573671337, guid: 1a0a3cd392e19d44ebe1a389f894d985, type: 3}
+  - {fileID: 4849007237843342516, guid: b40c1e3bb90bba2469751045f807a58f, type: 3}
   SpawnIntervalMultiplier: 41.17
   Flatness: 4
   IsEndgame: 1
   EndgameHardness: 1
-  SpawnBeginOffsetSeconds: 90
+  SpawnBeginOffsetSeconds: 135
   SecondsActive: 90

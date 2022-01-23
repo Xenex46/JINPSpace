@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DestructibleObject: {fileID: 6040415532934211463}
-  m_ScoreValue: 999
+  m_ScoreValue: 1
   m_Animator: {fileID: 6040415531176964179}
   m_MovementSpeed: {x: 5, y: 5}
   m_SideMovementAmplitude: 10

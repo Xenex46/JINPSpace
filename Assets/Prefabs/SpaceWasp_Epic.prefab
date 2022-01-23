@@ -369,6 +369,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceWasp_Epic
       objectReference: {fileID: 0}
+    - target: {fileID: 6040415532934211483, guid: e066e6748963d3e4999d03759e9d99dd,
+        type: 3}
+      propertyPath: m_ScoreValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7316650183644461236, guid: e066e6748963d3e4999d03759e9d99dd,
         type: 3}
       propertyPath: m_ProjectilePrefab
