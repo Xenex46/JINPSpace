@@ -51,6 +51,8 @@ public class Weapon : MonoBehaviour
             projectileInstance.Restart(emitter.position, emitter.rotation);
         }
 
+        m_Ammo--;
+
         yield return new WaitForSeconds(1f / m_RateOfFire);
 
         m_LimiterCoroutine = null;

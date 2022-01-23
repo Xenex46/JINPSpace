@@ -1475,6 +1475,11 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5268103364109231874, guid: bcc0edb83e9349e41a89fc978cef241b,
+        type: 3}
+      propertyPath: m_InfiniteAmmo
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7626910131852091080, guid: bcc0edb83e9349e41a89fc978cef241b,
         type: 3}
       propertyPath: m_RootOrder
