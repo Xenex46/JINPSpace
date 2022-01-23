@@ -13,6 +13,11 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float m_RateOfFire = 10f;
 
+    [SerializeField]
+    private bool m_InfiniteAmmo = false;
+
+    public float m_Ammo = 0;
+
     private PrefabPool<ProjectileMovement> m_Pool = null;
 
     private Coroutine m_LimiterCoroutine = null;
@@ -25,6 +30,11 @@ public class Weapon : MonoBehaviour
     public bool Fire()
     {
         if (m_LimiterCoroutine != null)
+        {
+            return false;
+        }
+
+        if (!m_InfiniteAmmo && m_Ammo == 0)
         {
             return false;
         }
