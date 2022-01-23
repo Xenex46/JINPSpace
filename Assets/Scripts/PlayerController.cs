@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     private bool m_Weapon5 = false;
 
-    private int selectedWeapon = 1;
+    private int selectedWeapon = 0;
 
     private readonly int m_HorizontalAnimatorHash = Animator.StringToHash("Horizontal");
 
