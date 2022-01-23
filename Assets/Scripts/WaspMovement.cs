@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class WaspMovement : APooledObject
 {
@@ -13,6 +14,12 @@ public class WaspMovement : APooledObject
 
     [SerializeField]
     private int m_ScoreValue = 999;
+
+    [SerializeField]
+    private ProjectileMovement m_ProjectilePrefab = null;
+
+    [SerializeField]
+    private List<Transform> m_Emitters = null;
 
     [SerializeField]
     private Animator m_Animator = null;
@@ -91,6 +98,13 @@ public class WaspMovement : APooledObject
     public void HandleDestroyed()
     {
         m_Animator.SetTrigger(m_DeathAnimatorHash);
+        PrefabPool<ProjectileMovement> m_Pool = PoolManager.Instance.GetPool(m_ProjectilePrefab);
+        foreach (Transform emitter in m_Emitters)
+        {
+
+            ProjectileMovement projectileInstance = m_Pool.Get();
+            projectileInstance.Restart(emitter.position, emitter.rotation);
+        }
     }
 
     public void Reset(Vector3 worldPosition)
