@@ -26,14 +26,28 @@ public class ProjectileMovement : APooledObject
     [SerializeField]
     private float m_DestroyAfter = 0;
 
+    [SerializeField]
+    private Explosion m_Explosion = null;
+
+    private PrefabPool<Explosion> m_Pool = null;
+
     private float m_AliveTime = 0;
 
+    private float m_AdditionalMovementSpeed = 0;
+
     private Vector3 m_StartingPosition;
+    private void Awake()
+    {
+        if (m_Explosion != null)
+        {
+            m_Pool = PoolManager.Instance.GetPool(m_Explosion);
+        }
+    }
 
     private void FixedUpdate()
     {
-        m_MovementSpeed += m_Acceleration * Time.fixedDeltaTime;
-        Vector3 targetPosition = m_Rigidbody.position + transform.forward * m_MovementSpeed * Time.fixedDeltaTime;
+        m_AdditionalMovementSpeed += m_Acceleration * Time.fixedDeltaTime;
+        Vector3 targetPosition = m_Rigidbody.position + transform.forward * (m_MovementSpeed + m_AdditionalMovementSpeed) * Time.fixedDeltaTime;
         m_Rigidbody.MovePosition(targetPosition);
 
         if (m_LineRenderer != null)
@@ -54,6 +68,11 @@ public class ProjectileMovement : APooledObject
 
     public void HandleObjectHit(bool applyDamage, DamageInfo damgeInfo)
     {
+        if (m_Explosion != null)
+        {
+            Explosion explosion = m_Pool.Get();
+            explosion.Restart(m_Rigidbody.position);
+        }
         if (m_DestroyOnImpact)
         {
             ReturnToPool();
@@ -66,6 +85,7 @@ public class ProjectileMovement : APooledObject
         transform.rotation = rotation;
 
         m_AliveTime = 0;
+        m_AdditionalMovementSpeed = 0;
 
         gameObject.SetActive(true);
         if (m_TrailRenderer != null)

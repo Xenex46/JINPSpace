@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 5322692855315555792}
   - component: {fileID: -7135455964585315854}
   - component: {fileID: -8475748815231224788}
+  - component: {fileID: -972882793579433375}
   m_Layer: 11
   m_Name: Rocket
   m_TagString: Untagged
@@ -139,10 +140,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8379376613157390124}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5536711
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 3.75}
 --- !u!114 &-8475748815231224788
 MonoBehaviour:
@@ -156,7 +157,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36cef6c4dfd04d4caecb216388279ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_IsPickup: 0
   m_MovementSpeed: 15
   m_Acceleration: 30
   m_Rigidbody: {fileID: 5322692855315555792}
   m_TrailRenderer: {fileID: 0}
+  m_DestroyOnImpact: 1
+  m_LineRenderer: {fileID: 0}
+  m_DestroyAfter: 0
+  m_Explosion: {fileID: 7032311513898370794, guid: 7dede7f4014309740b3157844a51bc15,
+    type: 3}
+--- !u!114 &-972882793579433375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379376613157390124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf41a047ae72f4047ad162bd3e65626e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DamageMin: 0
+  m_DamageMax: 0
+  OnObjectHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8475748815231224788}
+        m_TargetAssemblyTypeName: ProjectileMovement, Assembly-CSharp
+        m_MethodName: HandleObjectHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -21,7 +21,6 @@ public class DamageDealer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         DamageHandler handler = other.GetComponent<DamageHandler>();
-        bool applyDamage = handler != null;
 
         DamageInfo damageInfo = new DamageInfo()
         {
@@ -29,6 +28,8 @@ public class DamageDealer : MonoBehaviour
             AmmoAmount = Random.Range(1, 5),
             Dealer = this
         };
+
+        bool applyDamage = handler != null && damageInfo.DamageAmount != 0;
 
         if (applyDamage)
         {

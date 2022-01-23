@@ -199,6 +199,8 @@ MonoBehaviour:
   m_Emitters:
   - {fileID: 4818783040456119178}
   m_RateOfFire: 2
+  m_InfiniteAmmo: 1
+  m_Ammo: 0
 --- !u!1 &3147604667666912701
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +288,8 @@ MonoBehaviour:
   - {fileID: 7000202203084801680}
   - {fileID: 3417142364422220858}
   m_RateOfFire: 4
+  m_InfiniteAmmo: 0
+  m_Ammo: 0
 --- !u!1 &4087873732976058716
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +339,8 @@ MonoBehaviour:
   m_Emitters:
   - {fileID: 5927083999940893326}
   m_RateOfFire: 1.5
+  m_InfiniteAmmo: 0
+  m_Ammo: 0
 --- !u!1 &4291050684225003815
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +747,8 @@ MonoBehaviour:
   - {fileID: 802018478901786064}
   - {fileID: 8769693482761480884}
   m_RateOfFire: 5
+  m_InfiniteAmmo: 0
+  m_Ammo: 0
 --- !u!1 &8802567894352599389
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +798,8 @@ MonoBehaviour:
   m_Emitters:
   - {fileID: 5846216422023574596}
   m_RateOfFire: 0.5
+  m_InfiniteAmmo: 0
+  m_Ammo: 0
 --- !u!1001 &7626910132814006355
 PrefabInstance:
   m_ObjectHideFlags: 0
