@@ -51,7 +51,7 @@ public class DestructibleObject : MonoBehaviour
         {
             int weaponNr = -damageInfo.DamageAmount;
             
-            m_PlayerController.m_Weapons.m_Weapons[weaponNr].m_Ammo += ammos[weaponNr];
+            m_PlayerController.m_Weapons.m_Weapons[weaponNr].m_Ammo += ammos[weaponNr - 1];
             return;
         }
 

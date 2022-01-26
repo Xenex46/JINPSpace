@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.3731188, g: 0.38073978, b: 0.3587304, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311867, g: 0.38073936, b: 0.35873017, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -566,13 +566,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerController: {fileID: 267207526}
-  m_SelectionSquares: []
+  m_SelectionSquares:
+  - {fileID: 2027486911}
+  - {fileID: 231498515}
+  - {fileID: 407684393}
+  - {fileID: 1182935066}
+  - {fileID: 460059271}
   m_AmmoAmounts:
-  - {fileID: 363883830}
-  - {fileID: 1465377240}
-  - {fileID: 1345229680}
-  - {fileID: 382249415}
-  - {fileID: 1407919388}
+  - {fileID: 363883832}
+  - {fileID: 1465377242}
+  - {fileID: 1345229682}
+  - {fileID: 382249417}
+  - {fileID: 1407919390}
 --- !u!1 &291378924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2838,7 +2843,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PlayerController
       value: 
-      objectReference: {fileID: 1856375580}
+      objectReference: {fileID: 267207526}
     - target: {fileID: 7626910131852091080, guid: bcc0edb83e9349e41a89fc978cef241b,
         type: 3}
       propertyPath: m_RootOrder
