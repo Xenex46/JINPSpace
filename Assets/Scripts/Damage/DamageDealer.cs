@@ -25,7 +25,7 @@ public class DamageDealer : MonoBehaviour
         DamageInfo damageInfo = new DamageInfo()
         {
             DamageAmount = GetDamage(),
-            AmmoAmount = Random.Range(1, 5),
+            AmmoAmount = 10,
             Dealer = this
         };
 

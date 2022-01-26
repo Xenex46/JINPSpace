@@ -26,6 +26,9 @@ public class DestructibleObject : MonoBehaviour
     private Vector3 m_HealthbarOffset;
 
     [SerializeField]
+    private int[] ammos = { 5, 5, 1, 3 };
+
+    [SerializeField]
     private Healthbar m_HealthbarPrefab = null;
 
     private Healthbar m_Healthbar = null;
@@ -46,7 +49,9 @@ public class DestructibleObject : MonoBehaviour
         
         if(damageInfo.DamageAmount < 0)
         {
-            m_PlayerController.m_Weapons.m_Weapons[-damageInfo.DamageAmount].m_Ammo += damageInfo.AmmoAmount;
+            int weaponNr = -damageInfo.DamageAmount;
+            
+            m_PlayerController.m_Weapons.m_Weapons[weaponNr].m_Ammo += ammos[weaponNr];
             return;
         }
 
