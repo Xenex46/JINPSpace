@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4735236123148229844}
   - component: {fileID: 267011787511340924}
   - component: {fileID: 1023815540980538256}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: ProjectilePickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_DestroyOnImpact: 1
   m_LineRenderer: {fileID: 0}
   m_DestroyAfter: 0
+  m_Explosion: {fileID: 0}
 --- !u!114 &4735236123148229844
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -117,6 +117,16 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1498458144819777340, guid: 5738cf3e49aa9e64b8a1afbf21c38b1d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498458144819777341, guid: 5738cf3e49aa9e64b8a1afbf21c38b1d,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 1498458144819777343, guid: 5738cf3e49aa9e64b8a1afbf21c38b1d,
         type: 3}
       propertyPath: m_Name
@@ -125,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 1498458144819777343, guid: 5738cf3e49aa9e64b8a1afbf21c38b1d,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4735236123148229844, guid: 5738cf3e49aa9e64b8a1afbf21c38b1d,
         type: 3}
@@ -186,7 +196,9 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions: []
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 5

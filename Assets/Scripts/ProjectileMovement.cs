@@ -88,6 +88,8 @@ public class ProjectileMovement : APooledObject
     {
         transform.position = position;
         transform.rotation = rotation;
+        m_Rigidbody.position = position;
+        m_Rigidbody.rotation = rotation;
 
         m_AliveTime = 0;
         m_AdditionalMovementSpeed = 0;
@@ -100,7 +102,6 @@ public class ProjectileMovement : APooledObject
         if (m_LineRenderer != null)
         {
             m_StartingPosition = m_Rigidbody.position;
-            m_LineRenderer.positionCount = 2;
             m_LineRenderer.SetPosition(0, m_Rigidbody.position);
             m_LineRenderer.SetPosition(1, m_Rigidbody.position);
         }
