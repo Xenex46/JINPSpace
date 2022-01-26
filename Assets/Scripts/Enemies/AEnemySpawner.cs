@@ -10,23 +10,25 @@ public abstract class AEnemySpawner<T> : MonoBehaviour where T : APooledObject
     [SerializeField]
     private List<Transform> spawnPoints = null;
 
+    private float m_TimeSinceStart = 0f;
     private float m_Timer = 0f;
 
     private void Start()
     {
-
+        m_Timer = Time.time;
+        m_TimeSinceStart = Time.time;
         for (double i = -5f; i <= 5f; i += 1f)
         {
-            Debug.Log("stagePercent = " + i +" "+ NormalDist(i)); 
+            //Debug.Log("stagePercent = " + i +" "+ NormalDist(i)); 
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        print(Time.time);
 
-        m_Timer += Time.deltaTime;
 
-        double time = Time.realtimeSinceStartup;
+        double time = Time.timeSinceLevelLoad;
 
         double offSet = m_Config.SpawnBeginOffsetSeconds;
 
@@ -41,9 +43,9 @@ public abstract class AEnemySpawner<T> : MonoBehaviour where T : APooledObject
             return;
         }
 
-        if (ShouldSpawn(m_Timer))
+        if (ShouldSpawn(Time.time - m_Timer))
         {
-            m_Timer = 0f;
+            m_Timer = Time.time;
             SpawnEnemy();
         }
     }
@@ -102,9 +104,9 @@ public abstract class AEnemySpawner<T> : MonoBehaviour where T : APooledObject
 
     private bool ShouldSpawn(float timer)
     {
-        double time = Time.realtimeSinceStartup;
+        double time = Time.time - m_TimeSinceStart;
 
-        time -= m_Config.SpawnBeginOffsetSeconds;
+        time = Mathf.Max(0f, (float)time - m_Config.SpawnBeginOffsetSeconds);
 
         double stagePercent = time / m_Config.SecondsActive * 100.0f;
 
@@ -121,7 +123,7 @@ public abstract class AEnemySpawner<T> : MonoBehaviour where T : APooledObject
 
         if (timer >= interval)
         {
-            Debug.Log("stagePercent = " + stagePercent);
+            //Debug.Log("stagePercent = " + stagePercent);
 
             Debug.Log("interval = " + interval);
 

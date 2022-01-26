@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Rigidbody m_Rigidbody = null;
 
+    [SerializeField]
+    private GameObject m_Shield = null;
+
     private float m_Vertical = 0f;
 
     private float m_Horizontal = 0f;
@@ -33,11 +36,17 @@ public class PlayerController : MonoBehaviour
 
     private bool m_Weapon5 = false;
 
+    private bool m_ShieldUse = false;
+
     public int selectedWeapon = 0;
 
     private readonly int m_HorizontalAnimatorHash = Animator.StringToHash("Horizontal");
 
     private readonly int m_VerticalAnimatorHash = Animator.StringToHash("Vertical");
+
+    private float m_ShieldTimeLeft = 0;
+
+    private Coroutine m_ShieldCoroutine = null;
 
     private void GetInput()
     {
@@ -51,12 +60,23 @@ public class PlayerController : MonoBehaviour
         m_Weapon3 = Input.GetButton("Weapon3");
         m_Weapon4 = Input.GetButton("Weapon4");
         m_Weapon5 = Input.GetButton("Weapon5");
+
+        m_ShieldUse = Input.GetButton("Special");
     }
 
     private void UpdateAnimator()
     {
         m_Animator.SetFloat(m_HorizontalAnimatorHash, m_Horizontal);
         m_Animator.SetFloat(m_VerticalAnimatorHash, m_Vertical);
+    }
+    private IEnumerator DeployShield()
+    {
+        m_ShieldTimeLeft = 2f;
+        m_Shield.SetActive(true);
+
+        yield return new WaitForSeconds(10);
+
+        m_ShieldCoroutine = null;
     }
 
     private void FixedUpdate()
@@ -100,6 +120,21 @@ public class PlayerController : MonoBehaviour
         if (m_Shoot)
         {
             m_Weapons.Fire(selectedWeapon);
+        }
+
+        if (m_ShieldTimeLeft > 0)
+        {
+            m_ShieldTimeLeft -= Time.deltaTime;
+
+            if (m_ShieldTimeLeft <= 0)
+            {
+                m_Shield.SetActive(false);
+            }
+        }
+
+        if (m_ShieldUse && m_ShieldCoroutine == null)
+        {
+            m_ShieldCoroutine = StartCoroutine(DeployShield());
         }
     }
 

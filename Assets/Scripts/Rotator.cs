@@ -9,7 +9,7 @@ public class Rotator : MonoBehaviour
 
     private void Update()
     {
-        transform.Rotate(m_RotationSpeed, Space.Self);
+        transform.Rotate(m_RotationSpeed*Time.deltaTime, Space.Self);
     }
 
 }

@@ -18,8 +18,8 @@ TagManager:
   - Enemy
   - PlayerProjectile
   - EnemyProjectile
-  - 
-  - 
+  - Pickup
+  - ShieldedProjectile
   - 
   - 
   - 

@@ -5,7 +5,10 @@ using UnityEngine;
 public class TextureScroller : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 m_ScrollingSpeed = new Vector2();
+    private Vector2 m_FixedSpeed = new Vector2();
+
+    [SerializeField]
+    private float m_PlayerSpeedModifier = 0;
 
     [SerializeField]
     private Renderer m_Renderer = null;
@@ -19,6 +22,7 @@ public class TextureScroller : MonoBehaviour
 
     void Update()
     {
-        m_Material.mainTextureOffset += m_ScrollingSpeed * Time.deltaTime;
+        Vector2 playerMovement = new Vector2(-Input.GetAxis("Horizontal"), -Input.GetAxis("Vertical")) * m_PlayerSpeedModifier;
+        m_Material.mainTextureOffset += (playerMovement + m_FixedSpeed) * Time.deltaTime;
     }
 }
