@@ -95,12 +95,12 @@ PrefabInstance:
     - target: {fileID: 4735236123148229844, guid: 5738cf3e49aa9e64b8a1afbf21c38b1d,
         type: 3}
       propertyPath: m_DamageMax
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4735236123148229844, guid: 5738cf3e49aa9e64b8a1afbf21c38b1d,
         type: 3}
       propertyPath: m_DamageMin
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5738cf3e49aa9e64b8a1afbf21c38b1d, type: 3}
