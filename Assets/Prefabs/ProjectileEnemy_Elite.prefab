@@ -183,10 +183,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36cef6c4dfd04d4caecb216388279ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovementSpeed: 40
+  m_IsPickup: 0
+  m_MovementSpeed: 30
   m_Acceleration: 0
   m_Rigidbody: {fileID: 1498458144819777341}
   m_TrailRenderer: {fileID: 1498458144819777282}
+  m_DestroyOnImpact: 1
+  m_LineRenderer: {fileID: 0}
+  m_DestroyAfter: 0
+  m_Explosion: {fileID: 0}
 --- !u!114 &4735236123148229844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,8 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf41a047ae72f4047ad162bd3e65626e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DamageMin: 15
-  m_DamageMax: 30
+  m_DamageMin: 10
+  m_DamageMax: 20
   OnObjectHit:
     m_PersistentCalls:
       m_Calls:

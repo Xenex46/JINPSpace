@@ -60,8 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf41a047ae72f4047ad162bd3e65626e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DamageMin: 50
-  m_DamageMax: 100
+  m_DamageMin: 70
+  m_DamageMax: 110
   OnObjectHit:
     m_PersistentCalls:
       m_Calls:

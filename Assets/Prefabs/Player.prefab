@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 7626910131852091087}
-  m_Speed: 15
+  m_Speed: 25
   m_Weapons:
     m_Weapons:
     - {fileID: 5268103364109231874}
@@ -557,6 +557,7 @@ MonoBehaviour:
     - {fileID: 19933698817370626}
   m_Rigidbody: {fileID: 4330969386464535332}
   m_Shield: {fileID: 7890225133936595747}
+  selectedWeapon: 0
 --- !u!95 &7626910131852091087
 Animator:
   serializedVersion: 3
@@ -664,6 +665,7 @@ MonoBehaviour:
   m_FloatingTextPrefab: {fileID: 6849007179813323748, guid: ae34a7d6a8af7c044a8e32075d64cc14,
     type: 3}
   m_HealthbarOffset: {x: 0, y: 1.5, z: -2.5}
+  ammos: 0a000000050000000100000003000000
   m_HealthbarPrefab: {fileID: 6075319969767261070, guid: 51faf468b542e5a42a1963aa12c9e206,
     type: 3}
 --- !u!1 &7626910132113207341

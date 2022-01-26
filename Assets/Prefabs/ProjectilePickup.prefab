@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DamageMin: -4
-  m_DamageMax: -1
+  m_DamageMax: 0
   OnObjectHit:
     m_PersistentCalls:
       m_Calls:
